@@ -116,10 +116,13 @@ produce-teaching-video/
 
 ## Roadmap
 
-- 增加数学推导、软件教程和历史因果模型的公开示例
-- 增加可选的课程简报与视觉计划 JSON Schema
-- 增加真实使用案例的匿名化复盘
-- 持续补充不同视频工具的非绑定式实现参考
+当前优先推进两个公开、可复现的完整案例：一个物理案例和一个非物理案例，同时补齐自动检查、全新安装验证和真实用户试用。
+
+- [两周公开维护路线图](./ROADMAP.md)
+- [真实用户试用说明](./docs/USER_TESTING.md)
+- [Codex for Open Source 申请准备度](./docs/CODEX_OSS_APPLICATION.md)
+
+后续再根据真实使用反馈增加 JSON Schema、更多学科模式和工具实现参考，避免为了显得丰富而堆积没有验证过的模板。
 
 ## License
 
