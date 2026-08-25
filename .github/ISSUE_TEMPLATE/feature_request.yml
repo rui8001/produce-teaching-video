@@ -1,0 +1,15 @@
+name: Method improvement
+description: Propose a reusable improvement to the teaching-video method
+title: "[Idea]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: Learner or production problem
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed change and evidence
+    validations:
+      required: true

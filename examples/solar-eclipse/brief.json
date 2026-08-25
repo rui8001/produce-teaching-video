@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "title": "Why solar eclipses do not happen every month",
+  "audience": "learners who know the Moon orbits Earth",
+  "learning_objective": "explain how orbital tilt changes eclipse alignment",
+  "likely_misconception": "every new moon should create a solar eclipse",
+  "prerequisites": ["relative positions of the Sun, Earth, and Moon"],
+  "model_limits": ["not to scale", "circular paths are a teaching simplification"],
+  "transfer_task": "predict what must align for a lunar eclipse",
+  "authorization_scope": ["local-scaffold", "read-only-research"]
+}

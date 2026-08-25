@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Teaching video skill icon">
+  <rect width="256" height="256" rx="58" fill="#0f766e"/>
+  <path d="M48 69c25-18 52-19 80-4 28-15 55-14 80 4v124c-26-15-53-16-80-2-27-14-54-13-80 2z" fill="#ecfeff"/>
+  <path d="M128 67v124" stroke="#0f766e" stroke-width="8"/>
+  <circle cx="128" cy="111" r="28" fill="#fbbf24"/>
+  <path d="m118 95 28 16-28 16z" fill="#0f172a"/>
+</svg>

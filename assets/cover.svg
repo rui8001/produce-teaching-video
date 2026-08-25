@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Produce Teaching Video</title>
+  <desc id="desc">A visual path from learner question to evidence, model, practice, and transfer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b2b"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="1030" cy="90" r="180" fill="#5eead4" opacity=".11"/>
+  <circle cx="1060" cy="600" r="260" fill="#38bdf8" opacity=".08"/>
+  <text x="72" y="92" fill="#99f6e4" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">CODEX SKILL</text>
+  <text x="72" y="175" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="58" font-weight="800">Produce Teaching Video</text>
+  <text x="72" y="220" fill="#ccfbf1" font-family="PingFang SC,Arial,sans-serif" font-size="27">把任意知识或技能，做成真正能教会人的视频</text>
+  <g filter="url(#shadow)" font-family="PingFang SC,Arial,sans-serif">
+    <rect x="70" y="305" width="190" height="120" rx="24" fill="#ffffff" opacity=".97"/>
+    <text x="165" y="355" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">学习目标</text>
+    <text x="165" y="391" text-anchor="middle" fill="#475569" font-size="17">误解与前置知识</text>
+    <path d="M260 365H315" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+    <path d="m305 350 18 15-18 15" fill="none" stroke="#5eead4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="330" y="305" width="190" height="120" rx="24" fill="#ffffff" opacity=".97"/>
+    <text x="425" y="355" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">可信证据</text>
+    <text x="425" y="391" text-anchor="middle" fill="#475569" font-size="17">观察与来源台账</text>
+    <path d="M520 365H575" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+    <path d="m565 350 18 15-18 15" fill="none" stroke="#5eead4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="590" y="305" width="190" height="120" rx="24" fill="#ffffff" opacity=".97"/>
+    <text x="685" y="355" text-anchor="middle" fill="#0f172a" font-size="22" font-weight="700">可视模型</text>
+    <text x="685" y="391" text-anchor="middle" fill="#475569" font-size="17">关系、步骤与边界</text>
+    <path d="M780 365H835" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+    <path d="m825 350 18 15-18 15" fill="none" stroke="#5eead4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="850" y="305" width="280" height="120" rx="24" fill="#f0fdfa"/>
+    <text x="990" y="355" text-anchor="middle" fill="#0f766e" font-size="22" font-weight="800">迁移应用</text>
+    <text x="990" y="391" text-anchor="middle" fill="#475569" font-size="17">观众能解释，也能做</text>
+  </g>
+  <text x="72" y="535" fill="#d1fae5" font-family="Inter,Arial,sans-serif" font-size="22">sources · continuous audio · semantic visuals · sample gate · final QC</text>
+</svg>

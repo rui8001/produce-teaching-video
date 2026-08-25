@@ -1,0 +1,19 @@
+name: Workflow problem
+description: Report a reproducible Skill routing, artifact, or instruction problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Request and observed behavior
+      description: Use a synthetic or public example; do not paste private production data.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Codex environment
