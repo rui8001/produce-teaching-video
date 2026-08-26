@@ -12,7 +12,7 @@ This document tracks repository evidence only. Personal application fields must 
 | Meaningful usage | Real testers, public Issues when appropriate, and consented case summaries | Not yet collected |
 | Active maintenance | Issue triage, meaningful commits, releases, and transparent changelog | Initial release only |
 | Reproducibility | Fresh-install test and complete examples | Planned |
-| Responsible automation | Automated quality, privacy, and release checks | Planned |
+| Responsible automation | Automated quality, privacy, and release checks | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) |
 | API-credit plan | PR review, issue triage, regression evaluation, and release automation | Draft direction ready |
 
 ## Private fields the maintainer must prepare
@@ -37,6 +37,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | --- | --- | --- | --- |
 | 2026-08-25 | Initial open-source release | [`v0.1.0`](https://github.com/rui8001/produce-teaching-video/releases/tag/v0.1.0) | Standalone Skill published |
 | 2026-08-25 | Public maintenance backlog | [Open Issues](https://github.com/rui8001/produce-teaching-video/issues) | Five outcome-based maintenance tasks opened |
+| 2026-08-26 | Automated public-package validation | [Repository quality run](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) | Skill, metadata, examples, links, SVG, and sensitive-data checks passed |
 
 ## Application gate
 
