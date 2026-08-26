@@ -9,6 +9,7 @@
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](./SKILL.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0f766e.svg)](./LICENSE)
 [![Release](https://img.shields.io/badge/release-v0.1.0-2563eb.svg)](./CHANGELOG.md)
+[![Repository quality](https://github.com/rui8001/produce-teaching-video/actions/workflows/quality.yml/badge.svg)](https://github.com/rui8001/produce-teaching-video/actions/workflows/quality.yml)
 
 > 这不是“套模板生成动画”。它先定义学习者需要发生什么变化，再锁定证据、心智模型、连续配音、真实时间轴、样片和迁移检验。
 
