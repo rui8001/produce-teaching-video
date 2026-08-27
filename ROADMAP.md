@@ -12,7 +12,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Foundation | Publish the maintenance plan, evidence checklist, and tester guide | Roadmap and linked GitHub issues | Complete |
 | Physics example | Expand the solar-eclipse brief into a reproducible end-to-end walkthrough | [Issue #5](https://github.com/rui8001/produce-teaching-video/issues/5) | Planned |
 | Quality automation | Validate the Skill, examples, links, SVG files, and sensitive-data boundaries on every change | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) | Complete |
-| Fresh install | Verify discovery and the five-minute start from a clean checkout | [Issue #3](https://github.com/rui8001/produce-teaching-video/issues/3) | Planned |
+| Fresh install | Verify discovery and the five-minute start from a clean checkout | [Verification record](./docs/FRESH_INSTALL_TEST.md) | Complete |
 | Non-physics example | Demonstrate transfer to a different teaching domain | [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Planned |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Planned |
 | Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | Changelog, tags, and release notes | Planned |

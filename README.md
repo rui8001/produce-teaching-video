@@ -54,14 +54,22 @@ flowchart LR
 
 ### 1. 安装
 
-个人安装：
+推荐直接在 Codex 中调用内置安装器：
+
+```text
+$skill-installer 从 https://github.com/rui8001/produce-teaching-video 安装这个 Skill。
+```
+
+也可以手动安装到个人 Skill 目录：
 
 ```bash
 git clone https://github.com/rui8001/produce-teaching-video.git \
-  ~/.codex/skills/produce-teaching-video
+  ~/.agents/skills/produce-teaching-video
 ```
 
 也可以克隆到某个项目的 `.agents/skills/produce-teaching-video/`，让 Skill 随项目维护。
+
+Codex 通常会自动发现新安装的 Skill；如果没有出现，请重启 Codex。仓库的[全新安装验证记录](./docs/FRESH_INSTALL_TEST.md)包含已测试环境、步骤和结果。
 
 ### 2. 调用
 

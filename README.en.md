@@ -6,10 +6,20 @@ It centers one learning objective, verified sources, a visible mental model, con
 
 ## Install
 
+Recommended: ask Codex to use its built-in installer.
+
+```text
+$skill-installer Install the Skill from https://github.com/rui8001/produce-teaching-video.
+```
+
+Manual user-scoped installation:
+
 ```bash
 git clone https://github.com/rui8001/produce-teaching-video.git \
-  ~/.codex/skills/produce-teaching-video
+  ~/.agents/skills/produce-teaching-video
 ```
+
+For repository-scoped use, clone it to `.agents/skills/produce-teaching-video/` inside that repository. Codex normally detects the new Skill automatically; restart Codex if it does not appear. See the [fresh-install verification](./docs/FRESH_INSTALL_TEST.md) for the tested environment and result.
 
 Invoke it with:
 
