@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">为什么不是每个月都有日食</title>
+  <desc id="desc">竖屏教学示意图。上方比较新月远离交点时月球影子从地球上方错过，下方显示新月接近交点时影子可能落到地球。天体大小、距离和倾角均不按比例。</desc>
+  <defs>
+    <radialGradient id="sunGlow">
+      <stop offset="0" stop-color="#fff7b2"/>
+      <stop offset="0.58" stop-color="#facc15"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </radialGradient>
+    <radialGradient id="earthFill" cx="35%" cy="30%">
+      <stop offset="0" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </radialGradient>
+    <linearGradient id="shadowMiss" x1="0" x2="1">
+      <stop offset="0" stop-color="#94a3b8" stop-opacity="0.66"/>
+      <stop offset="1" stop-color="#475569" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="shadowHit" x1="0" x2="1">
+      <stop offset="0" stop-color="#a5b4fc" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0.28"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <marker id="arrowAmber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#fbbf24"/>
+    </marker>
+    <style>
+      .zh { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+      .label { font-size: 28px; fill: #cbd5e1; }
+      .small { font-size: 24px; fill: #94a3b8; }
+      .panel-title { font-size: 38px; font-weight: 700; fill: #f8fafc; }
+      .body { font-size: 31px; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1920" fill="#07111f"/>
+  <circle cx="910" cy="105" r="160" fill="#1d4ed8" opacity="0.08"/>
+  <circle cx="104" cy="1770" r="210" fill="#7c3aed" opacity="0.08"/>
+
+  <g class="zh">
+    <text x="70" y="108" font-size="55" font-weight="800" fill="#f8fafc">为什么不是每个月都有日食？</text>
+    <text x="70" y="165" font-size="28" fill="#94a3b8">同样是新月，关键差别藏在侧视关系里</text>
+
+    <rect x="52" y="228" width="976" height="594" rx="36" fill="#0f1d31" stroke="#334155" stroke-width="2"/>
+    <rect x="82" y="260" width="210" height="48" rx="24" fill="#78350f"/>
+    <text x="187" y="294" text-anchor="middle" font-size="25" font-weight="700" fill="#fde68a">常见的新月</text>
+    <text x="82" y="361" class="panel-title">远离交点：影子错过地球</text>
+    <text x="82" y="407" class="small">月球轨道相对黄道面倾斜约 5°</text>
+
+    <line x1="122" y1="630" x2="948" y2="630" stroke="#60a5fa" stroke-width="4"/>
+    <text x="718" y="674" class="label">黄道面</text>
+    <line x1="170" y1="690" x2="915" y2="515" stroke="#fbbf24" stroke-width="5" stroke-dasharray="15 14"/>
+
+    <circle cx="150" cy="630" r="58" fill="#f59e0b" opacity="0.22" filter="url(#softGlow)"/>
+    <circle cx="150" cy="630" r="45" fill="url(#sunGlow)"/>
+    <text x="150" y="728" text-anchor="middle" class="label">太阳</text>
+
+    <circle cx="502" cy="611" r="30" fill="#cbd5e1" stroke="#f8fafc" stroke-width="3"/>
+    <text x="502" y="566" text-anchor="middle" class="label">月球</text>
+    <path d="M529 595 L935 520 L935 548 L529 627 Z" fill="url(#shadowMiss)"/>
+
+    <circle cx="880" cy="630" r="53" fill="url(#earthFill)" stroke="#bfdbfe" stroke-width="3"/>
+    <path d="M850 604 C868 593 885 594 905 606 C890 613 878 621 872 643 C858 637 850 623 850 604 Z" fill="#34d399" opacity="0.8"/>
+    <text x="880" y="728" text-anchor="middle" class="label">地球</text>
+    <text x="672" y="480" class="body" fill="#fde68a">阴影从上方错过</text>
+
+    <rect x="52" y="856" width="976" height="620" rx="36" fill="#0f1d31" stroke="#4f46e5" stroke-width="2"/>
+    <rect x="82" y="888" width="250" height="48" rx="24" fill="#312e81"/>
+    <text x="207" y="922" text-anchor="middle" font-size="25" font-weight="700" fill="#c7d2fe">日食机会出现</text>
+    <text x="82" y="989" class="panel-title">接近交点：影子可能落到地球</text>
+    <text x="82" y="1035" class="small">两个轨道平面的相交位置叫“交点”</text>
+
+    <line x1="122" y1="1242" x2="948" y2="1242" stroke="#60a5fa" stroke-width="4"/>
+    <line x1="170" y1="1308" x2="915" y2="1133" stroke="#fbbf24" stroke-width="5" stroke-dasharray="15 14"/>
+    <circle cx="519" cy="1226" r="16" fill="#f8fafc" stroke="#818cf8" stroke-width="8"/>
+    <line x1="519" y1="1166" x2="519" y2="1204" stroke="#a5b4fc" stroke-width="4" marker-end="url(#arrowAmber)"/>
+    <text x="519" y="1146" text-anchor="middle" class="body" fill="#c7d2fe">交点附近</text>
+
+    <circle cx="150" cy="1242" r="58" fill="#f59e0b" opacity="0.22" filter="url(#softGlow)"/>
+    <circle cx="150" cy="1242" r="45" fill="url(#sunGlow)"/>
+    <text x="150" y="1340" text-anchor="middle" class="label">太阳</text>
+
+    <circle cx="519" cy="1242" r="30" fill="#cbd5e1" stroke="#f8fafc" stroke-width="3"/>
+    <path d="M548 1215 L928 1228 L928 1256 L548 1269 Z" fill="url(#shadowHit)"/>
+    <text x="519" y="1340" text-anchor="middle" class="label">月球</text>
+
+    <circle cx="880" cy="1242" r="53" fill="url(#earthFill)" stroke="#bfdbfe" stroke-width="3"/>
+    <path d="M850 1216 C868 1205 885 1206 905 1218 C890 1225 878 1233 872 1255 C858 1249 850 1235 850 1216 Z" fill="#34d399" opacity="0.8"/>
+    <ellipse cx="842" cy="1242" rx="13" ry="40" fill="#312e81" opacity="0.72"/>
+    <text x="880" y="1340" text-anchor="middle" class="label">地球</text>
+    <text x="666" y="1166" class="body" fill="#c7d2fe">影子落到地球</text>
+    <text x="82" y="1418" class="small">注：接近交点仍表示“可能”，不是所有地点都必然看到日食。</text>
+
+    <rect x="52" y="1513" width="976" height="250" rx="36" fill="#111c33" stroke="#1e40af" stroke-width="2"/>
+    <text x="82" y="1575" font-size="27" font-weight="700" fill="#93c5fd">判断规则</text>
+    <text x="540" y="1663" text-anchor="middle" font-size="44" font-weight="800" fill="#f8fafc">
+      <tspan fill="#fcd34d">新月</tspan>
+      <tspan fill="#64748b"> ＋ </tspan>
+      <tspan fill="#a5b4fc">接近交点</tspan>
+      <tspan fill="#64748b"> → </tspan>
+      <tspan fill="#f8fafc">可能发生日食</tspan>
+    </text>
+    <text x="540" y="1722" text-anchor="middle" class="small">新月是必要条件，但不是充分条件</text>
+
+    <text x="540" y="1828" text-anchor="middle" font-size="25" fill="#64748b">教学示意｜大小、距离、轨道曲率和倾角均不按比例</text>
+  </g>
+</svg>

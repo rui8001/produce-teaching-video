@@ -85,7 +85,7 @@ $produce-teaching-video 把“为什么不是每个月都有日食”制作成�
 
 ### 3. 从示例开始
 
-查看 [日食教学简报](./examples/solar-eclipse/brief.json) 和对应的 [示例说明](./examples/solar-eclipse/README.md)。它展示的是公开、脱敏的输入结构，不包含作者的真实生产项目或素材。
+查看完整的 [“为什么不是每个月都有日食”公开示例](./examples/solar-eclipse/README.md)。它包含学习简报、来源台账、纯口播稿、表演稿、语义视觉计划、自绘示意图、生产状态和质检记录，并诚实标出仍需真实音频才能完成的阶段。示例不包含作者的真实生产项目或素材。
 
 ## Skill 如何工作
 

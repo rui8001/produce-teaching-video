@@ -9,6 +9,7 @@
 - Codex for Open Source application-readiness and evidence checklist.
 - Automated repository validation for Skill metadata, examples, local links, SVG files, and common sensitive-data patterns.
 - Reproducible fresh-install and Codex discovery verification.
+- Source-checked solar-eclipse walkthrough with a locked brief and script, semantic visual plan, self-authored SVG, production status, and honest QC gates.
 
 ### Changed
 

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "language": "zh-CN",
+  "timing_basis": "semantic-only-until-accepted-continuous-audio",
+  "speakers": [
+    {
+      "id": "narrator",
+      "role": "calm-inquiry-led-instructor"
+    }
+  ],
+  "lines": [
+    {
+      "id": "L1",
+      "speaker": "narrator",
+      "text": "新月时，月球和太阳在天空中的方向很接近。那为什么月球不是每个月都把太阳挡住？",
+      "performance": "先陈述已知，再用真正疑惑的语气提问；问题后留思考停顿",
+      "teaching_function": "prediction"
+    },
+    {
+      "id": "L2",
+      "speaker": "narrator",
+      "text": "只看太阳、月球和地球的俯视投影，它们好像月月都会排成一线。换成侧视图，关键差别就出现了。",
+      "performance": "‘俯视投影’稍慢，‘侧视图’加重",
+      "teaching_function": "expose-viewpoint-limit"
+    },
+    {
+      "id": "L3",
+      "speaker": "narrator",
+      "text": "月球绕地球的轨道，相对地球绕太阳的轨道平面倾斜大约五度。所以大多数新月时，月球会从太阳方向的上方或下方经过，月球的影子也就从地球上方或下方错过去。",
+      "performance": "解释平稳；‘大约五度’和‘错过去’轻度强调",
+      "teaching_function": "causal-model"
+    },
+    {
+      "id": "L4",
+      "speaker": "narrator",
+      "text": "两个轨道平面相交的位置叫交点。只有新月发生在交点附近，太阳、月球和地球才可能排得足够直，让月球的影子落到地球上，形成日食。",
+      "performance": "术语先清楚定义；‘才可能’必须完整读出，避免说成必然",
+      "teaching_function": "name-and-explain-condition"
+    },
+    {
+      "id": "L5",
+      "speaker": "narrator",
+      "text": "所以判断口诀不是“新月就有日食”，而是“新月，加上接近交点”。",
+      "performance": "前后规则形成对比；后半句分两拍",
+      "teaching_function": "rule-compression"
+    },
+    {
+      "id": "L6",
+      "speaker": "narrator",
+      "text": "现在换你判断：如果满月也在交点附近，地球位于太阳和月球之间，可能发生什么？答案是月食。",
+      "performance": "问题后留足思考停顿，再给答案",
+      "teaching_function": "transfer-check"
+    }
+  ]
+}

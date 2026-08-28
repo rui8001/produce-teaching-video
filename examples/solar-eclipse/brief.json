@@ -1,11 +1,38 @@
 {
   "schema_version": 1,
-  "title": "Why solar eclipses do not happen every month",
-  "audience": "learners who know the Moon orbits Earth",
-  "learning_objective": "explain how orbital tilt changes eclipse alignment",
-  "likely_misconception": "every new moon should create a solar eclipse",
-  "prerequisites": ["relative positions of the Sun, Earth, and Moon"],
-  "model_limits": ["not to scale", "circular paths are a teaching simplification"],
-  "transfer_task": "predict what must align for a lunar eclipse",
-  "authorization_scope": ["local-scaffold", "read-only-research"]
+  "slug": "solar-eclipse",
+  "title": "为什么不是每个月都有日食",
+  "language": "zh-CN",
+  "audience": "知道月球绕地球运动、但尚不了解轨道交点的初中学习者",
+  "learning_objective": "能用月球轨道倾角和交点解释为什么大多数新月不会发生日食，并把同一模型迁移到月食判断",
+  "likely_misconception": "每次新月，太阳、月球和地球都会严格排成一线，所以应该每月都有日食",
+  "prerequisites": [
+    "知道月球绕地球运动",
+    "能识别太阳、地球和月球的相对位置"
+  ],
+  "platform": "竖屏教学短视频，9:16",
+  "target_duration": "60–90 秒；只在连续配音被接受后锁定实际时长",
+  "style": "克制、清晰的二维示意动画；通过俯视与侧视比较纠正常见误解",
+  "source_scope": "NASA Science 与 NASA GSFC 的公开天文资料",
+  "model_limits": [
+    "天体大小和相互距离不按真实比例",
+    "轨道绘制为规则曲线，省略真实偏心率和摄动",
+    "二维静态画面压缩了三维空间和连续运动",
+    "约五度倾角会为可读性而视觉放大"
+  ],
+  "transfer_task": "判断满月接近轨道交点且地球位于太阳与月球之间时可能发生的现象",
+  "success_evidence": "学习者能说出‘新月 + 接近交点’而不只是背诵‘轨道有倾角’，并能判断迁移题可能发生月食",
+  "authorization_scope": [
+    "公开资料研究",
+    "仓库内自绘 SVG",
+    "本地预制作草稿",
+    "将脱敏示例发布到本公开仓库"
+  ],
+  "excluded_without_new_authorization": [
+    "付费配音或素材服务",
+    "购买或下载第三方受限素材",
+    "最终视频渲染",
+    "向视频平台公开发布"
+  ],
+  "status": "brief-locked"
 }

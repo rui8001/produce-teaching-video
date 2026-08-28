@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "format": "9:16 vertical",
+  "timing_basis": "semantic-only-until-accepted-continuous-audio",
+  "global_accessibility": [
+    "关键差别同时使用位置、文字标签和颜色，不只依赖颜色",
+    "所有示意画面持续显示‘不按比例’提示",
+    "字幕将在真实音频对齐后生成，不从脚本文字估算秒数"
+  ],
+  "shots": [
+    {
+      "id": "S1",
+      "spoken_line_ids": ["L1"],
+      "teaching_function": "prediction",
+      "viewer_takeaway": "新月经常发生，但日食并不每月发生，这里存在待解释的矛盾",
+      "visual_role": "model",
+      "initial_state": "月相月历上连续出现多个新月标记",
+      "meaningful_changes": ["在新月标记下逐一出现问号", "问题文字进入画面中心"],
+      "evidence": "不呈现未经来源支持的发生次数，只表达‘不是每月都有’",
+      "labels": ["新月", "为什么不是每个月都有日食？"],
+      "transition": "镜头沿视线方向压缩为俯视投影",
+      "accessibility": "问号同时配文字问题",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S2",
+      "spoken_line_ids": ["L2"],
+      "teaching_function": "make-misconception-visible",
+      "viewer_takeaway": "单一俯视投影会让三者看起来总能排成一线",
+      "visual_role": "model",
+      "initial_state": "太阳、月球、地球在俯视投影中近似共线",
+      "meaningful_changes": ["相机方位图标从俯视旋转到侧视", "扁平直线展开为两个相交平面"],
+      "evidence": "视角变化是解释模型，不是实拍镜头",
+      "labels": ["俯视投影", "侧视关系"],
+      "transition": "三维翻转，保持三个天体的身份连续",
+      "accessibility": "用相机方位和文字说明视角切换",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S3",
+      "spoken_line_ids": ["L3"],
+      "teaching_function": "causal-model",
+      "viewer_takeaway": "约五度的轨道倾角会让多数新月的影子从地球上方或下方错过",
+      "visual_role": "model",
+      "initial_state": "黄道面为水平参考线，月球轨道面带有放大的倾角",
+      "meaningful_changes": ["月球移动到黄道面上方的新月位置", "月球影锥向后延伸并从地球上方错过"],
+      "evidence": "事实对应来源台账 C2；角度和距离均不按比例",
+      "labels": ["黄道面", "月球轨道面", "约 5°", "影子错过地球", "示意图，不按比例"],
+      "transition": "冻结错过状态并移到比较画面左侧",
+      "accessibility": "轨道面除颜色外还用实线和虚线区分",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S4",
+      "spoken_line_ids": ["L4"],
+      "teaching_function": "freeze-and-compare",
+      "viewer_takeaway": "接近两个轨道平面的交点时，影子才可能落到地球上",
+      "visual_role": "evidence",
+      "initial_state": "左侧保留影子错过地球的状态，右侧显示月球位于交点附近",
+      "meaningful_changes": ["高亮两个平面的交线与交点", "右侧影锥移动并落到地球", "‘可能发生日食’标签出现"],
+      "evidence": "事实对应来源台账 C1 和 C3；‘可能’保留其他几何变量",
+      "labels": ["远离交点", "接近交点", "交点", "可能发生日食"],
+      "transition": "比较面板收拢为条件公式",
+      "accessibility": "命中与错过用位置、箭头和文字三重编码",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S5",
+      "spoken_line_ids": ["L5"],
+      "teaching_function": "rule-compression",
+      "viewer_takeaway": "新月是必要条件，接近交点是额外条件",
+      "visual_role": "model",
+      "initial_state": "错误规则‘新月 = 日食’显示为灰色",
+      "meaningful_changes": ["错误规则被划去", "‘新月 + 接近交点 → 可能发生日食’逐项点亮"],
+      "evidence": "压缩自来源台账 C1–C3，不把可能写成必然",
+      "labels": ["新月", "接近交点", "可能发生日食"],
+      "transition": "把太阳和月球换到地球两侧，进入迁移题",
+      "accessibility": "错误与正确规则用划线和文字结构区分",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S6",
+      "spoken_line_ids": ["L6"],
+      "teaching_function": "transfer-check",
+      "viewer_takeaway": "把交点模型迁移到满月情形，可判断可能发生月食",
+      "visual_role": "evidence",
+      "initial_state": "太阳—地球—月球近似共线，答案区域留空",
+      "meaningful_changes": ["问题出现并留出思考状态", "地球影子覆盖月球", "答案‘月食’出现"],
+      "evidence": "事实对应来源台账 C4；仍标注不按比例",
+      "labels": ["满月", "接近交点", "地球影子", "月食"],
+      "transition": "停在迁移结论和来源提示",
+      "accessibility": "思考与答案阶段有明确文字状态，不只依赖旁白停顿",
+      "timing_state": "unlocked-until-audio"
+    }
+  ]
+}
