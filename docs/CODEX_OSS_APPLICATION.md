@@ -40,6 +40,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-08-26 | Automated public-package validation | [Repository quality run](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) | Skill, metadata, examples, links, SVG, and sensitive-data checks passed |
 | 2026-08-27 | Isolated fresh-install and Codex discovery test | [Verification record](./FRESH_INSTALL_TEST.md) | Public download, validation, metadata, and discovery passed without credentials or paid services |
 | 2026-08-28 | Source-checked physics walkthrough | [Solar-eclipse example](../examples/solar-eclipse/README.md) | Brief, source ledger, script, visual plan, self-authored SVG, status, and QC boundaries published |
+| 2026-08-29 | Verified v0.1.1 tag | [Release verification](./RELEASE_VERIFICATION_V0.1.1.md) | Release commit passed CI and a fresh tagged checkout passed validation and Codex discovery; GitHub Release page pending maintainer confirmation |
 
 ## Application gate
 

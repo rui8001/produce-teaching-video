@@ -15,7 +15,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Fresh install | Verify discovery and the five-minute start from a clean checkout | [Verification record](./docs/FRESH_INSTALL_TEST.md) | Complete |
 | Non-physics example | Demonstrate transfer to a different teaching domain | [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Planned |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Planned |
-| Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | Changelog, tags, and release notes | Planned |
+| Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | [v0.1.1 tag verification](./docs/RELEASE_VERIFICATION_V0.1.1.md); GitHub Release page awaits maintainer confirmation | In progress |
 | Application pack | Summarize maintenance, usage, ecosystem value, and planned API-credit use | Maintainer-only application checklist | Planned |
 
 Releases are tied to completed outcomes, not to a calendar alone. If a release gate is not met, the release moves rather than publishing an empty version.
