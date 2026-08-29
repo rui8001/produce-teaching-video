@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-08-29
+
 ### Added
 
 - Two-week public maintenance roadmap with outcome-based release gates.
@@ -14,6 +16,11 @@
 ### Changed
 
 - Updated personal installation examples to the current `~/.agents/skills` location documented by OpenAI.
+
+### Upgrade notes
+
+- Existing users can pull the new release without changing the `$produce-teaching-video` invocation.
+- Users who manually installed the Skill under the older `~/.codex/skills` location should reinstall it under `~/.agents/skills` and avoid keeping duplicate copies.
 
 ## [0.1.0] - 2026-08-25
 
