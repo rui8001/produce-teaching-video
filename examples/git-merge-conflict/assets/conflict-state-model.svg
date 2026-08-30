@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">安全处理一个 Git 合并冲突</title>
+  <desc id="desc">竖屏教学示意图。上方展示 main 和 feature 对同一行的不同修改，中间解释 Git 冲突标记，下方显示确认意图、写出最终文本、git add 和 git merge continue 的流程。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081321"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="decision" x1="0" x2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .zh { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Menlo, Consolas, monospace; }
+      .panel-title { font-size: 38px; font-weight: 750; fill: #f8fafc; }
+      .label { font-size: 27px; fill: #cbd5e1; }
+      .small { font-size: 23px; fill: #94a3b8; }
+      .code { font-size: 26px; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1920" fill="url(#background)"/>
+  <circle cx="950" cy="100" r="175" fill="#1d4ed8" opacity="0.08"/>
+  <circle cx="50" cy="1800" r="220" fill="#7c3aed" opacity="0.08"/>
+
+  <g class="zh">
+    <text x="66" y="104" font-size="54" font-weight="820" fill="#f8fafc">Git 冲突不是“坏了”</text>
+    <text x="66" y="164" font-size="30" fill="#94a3b8">它在等人决定：最终内容应该是什么？</text>
+
+    <rect x="50" y="222" width="980" height="460" rx="34" fill="#101d31" stroke="#334155" stroke-width="2"/>
+    <rect x="78" y="252" width="228" height="48" rx="24" fill="#1e3a8a"/>
+    <text x="192" y="286" text-anchor="middle" font-size="24" font-weight="700" fill="#bfdbfe">1｜看见两份答案</text>
+    <text x="78" y="352" class="panel-title">两个分支修改同一区域</text>
+    <text x="78" y="394" class="small">共同版本：截止时间是周五 17:00</text>
+
+    <circle cx="195" cy="500" r="18" fill="#64748b"/>
+    <line x1="213" y1="500" x2="350" y2="430" stroke="#60a5fa" stroke-width="7"/>
+    <line x1="213" y1="500" x2="350" y2="570" stroke="#f59e0b" stroke-width="7" stroke-dasharray="13 10"/>
+    <circle cx="350" cy="430" r="18" fill="#60a5fa"/>
+    <circle cx="350" cy="570" r="18" fill="#f59e0b"/>
+
+    <rect x="390" y="410" width="560" height="74" rx="18" fill="#102a43" stroke="#60a5fa" stroke-width="2"/>
+    <text x="420" y="440" class="small" fill="#93c5fd">main</text>
+    <text x="420" y="470" class="code mono">截止时间：周五 15:00</text>
+    <rect x="390" y="530" width="560" height="74" rx="18" fill="#302413" stroke="#f59e0b" stroke-width="2"/>
+    <text x="420" y="560" class="small" fill="#fcd34d">feature</text>
+    <text x="420" y="590" class="code mono">截止时间：周四 17:00</text>
+    <text x="540" y="646" text-anchor="middle" font-size="25" font-weight="700" fill="#fca5a5">Git 无法自动判断最终会议时间</text>
+
+    <rect x="50" y="720" width="980" height="630" rx="34" fill="#101d31" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="78" y="750" width="228" height="48" rx="24" fill="#4c1d95"/>
+    <text x="192" y="784" text-anchor="middle" font-size="24" font-weight="700" fill="#ddd6fe">2｜读懂冲突标记</text>
+    <text x="78" y="850" class="panel-title">先定位，再比较，不要盲选</text>
+
+    <rect x="78" y="892" width="924" height="370" rx="22" fill="#070d18" stroke="#334155" stroke-width="2"/>
+    <circle cx="112" cy="925" r="8" fill="#fb7185"/>
+    <circle cx="140" cy="925" r="8" fill="#fbbf24"/>
+    <circle cx="168" cy="925" r="8" fill="#34d399"/>
+    <text x="925" y="934" text-anchor="end" class="small mono">plan.txt</text>
+
+    <rect x="98" y="964" width="580" height="66" rx="12" fill="#172554"/>
+    <text x="122" y="1005" class="code mono" fill="#93c5fd">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+    <text x="122" y="1058" class="code mono">截止时间：周五 15:00</text>
+    <rect x="98" y="1080" width="580" height="46" rx="12" fill="#3b1d52"/>
+    <text x="122" y="1113" class="code mono" fill="#d8b4fe">=======</text>
+    <text x="122" y="1162" class="code mono">截止时间：周四 17:00</text>
+    <rect x="98" y="1184" width="580" height="58" rx="12" fill="#4a2c0c"/>
+    <text x="122" y="1222" class="code mono" fill="#fcd34d">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</text>
+
+    <line x1="700" y1="996" x2="764" y2="996" stroke="#60a5fa" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="786" y="1005" class="label">当前分支</text>
+    <line x1="700" y1="1103" x2="764" y2="1103" stroke="#c084fc" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="786" y="1112" class="label">分隔线</text>
+    <line x1="700" y1="1212" x2="764" y2="1212" stroke="#f59e0b" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="786" y="1221" class="label">待合入分支</text>
+    <text x="540" y="1307" text-anchor="middle" font-size="25" fill="#cbd5e1">冲突标记指出“哪里不确定”，不会告诉你“该选哪边”</text>
+
+    <rect x="50" y="1388" width="980" height="410" rx="34" fill="#101d31" stroke="#2563eb" stroke-width="2"/>
+    <rect x="78" y="1418" width="268" height="48" rx="24" fill="#0f3b72"/>
+    <text x="212" y="1452" text-anchor="middle" font-size="24" font-weight="700" fill="#bfdbfe">3｜人来决定并完成</text>
+    <text x="78" y="1518" class="panel-title">确认意图，写出新的最终版本</text>
+
+    <rect x="78" y="1560" width="924" height="84" rx="20" fill="url(#decision)" opacity="0.92"/>
+    <text x="108" y="1593" class="small" fill="#dbeafe">最终文本</text>
+    <text x="108" y="1628" font-size="31" font-weight="720" fill="#ffffff" class="mono">截止时间：周四 15:00</text>
+
+    <rect x="78" y="1680" width="350" height="66" rx="20" fill="#0b253d" stroke="#38bdf8" stroke-width="2"/>
+    <text x="253" y="1723" text-anchor="middle" font-size="26" fill="#bae6fd" class="mono">git add plan.txt</text>
+    <line x1="450" y1="1713" x2="526" y2="1713" stroke="#94a3b8" stroke-width="4" marker-end="url(#arrow)"/>
+    <rect x="550" y="1680" width="452" height="66" rx="20" fill="#14213d" stroke="#818cf8" stroke-width="2"/>
+    <text x="776" y="1723" text-anchor="middle" font-size="25" fill="#c7d2fe" class="mono">git merge --continue</text>
+
+    <text x="540" y="1850" text-anchor="middle" font-size="34" font-weight="760" fill="#f8fafc">
+      <tspan fill="#93c5fd">Git 指出位置</tspan>
+      <tspan fill="#64748b"> ｜ </tspan>
+      <tspan fill="#fcd34d">人决定含义</tspan>
+    </text>
+  </g>
+</svg>

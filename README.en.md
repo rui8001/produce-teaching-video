@@ -27,4 +27,4 @@ Invoke it with:
 $produce-teaching-video Teach why a solar eclipse does not happen every month.
 ```
 
-See the full [Chinese README](./README.md), the [Skill entrypoint](./SKILL.md), and the [public example](./examples/solar-eclipse/README.md).
+See the full [Chinese README](./README.md), the [Skill entrypoint](./SKILL.md), and two cross-domain public examples: [solar-eclipse reasoning](./examples/solar-eclipse/README.md) and [Git merge-conflict resolution](./examples/git-merge-conflict/README.md).

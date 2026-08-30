@@ -33,3 +33,6 @@ jobs:
 
       - name: Validate public Skill package
         run: python scripts/validate_repository.py
+
+      - name: Run deterministic Git teaching demonstration
+        run: bash examples/git-merge-conflict/demo.sh

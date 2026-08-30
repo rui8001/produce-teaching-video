@@ -13,7 +13,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Physics example | Expand the solar-eclipse brief into a reproducible end-to-end walkthrough | [Complete walkthrough](./examples/solar-eclipse/README.md) · [Issue #5](https://github.com/rui8001/produce-teaching-video/issues/5) | Complete |
 | Quality automation | Validate the Skill, examples, links, SVG files, and sensitive-data boundaries on every change | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) | Complete |
 | Fresh install | Verify discovery and the five-minute start from a clean checkout | [Verification record](./docs/FRESH_INSTALL_TEST.md) | Complete |
-| Non-physics example | Demonstrate transfer to a different teaching domain | [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Planned |
+| Non-physics example | Demonstrate transfer to a different teaching domain | [Complete Git walkthrough](./examples/git-merge-conflict/README.md) · [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Complete |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Planned |
 | Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | [v0.1.1 tag verification](./docs/RELEASE_VERIFICATION_V0.1.1.md); GitHub Release page awaits maintainer confirmation | In progress |
 | Application pack | Summarize maintenance, usage, ecosystem value, and planned API-credit use | Maintainer-only application checklist | Planned |

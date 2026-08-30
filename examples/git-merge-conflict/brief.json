@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "slug": "git-merge-conflict",
+  "title": "安全处理一个简单 Git 合并冲突",
+  "language": "zh-CN",
+  "audience": "会创建提交和分支、但第一次遇到文本合并冲突的 Git 初学者",
+  "learning_objective": "能读懂一个简单文本冲突的状态和标记，基于需求写出最终内容，标记解决并完成或安全放弃合并",
+  "likely_misconception": "出现冲突表示 Git 或某个分支坏了，只要无脑选择 ours 或 theirs 就能解决",
+  "prerequisites": [
+    "知道提交和分支保存不同版本",
+    "能在终端运行基本 Git 命令",
+    "能用文本编辑器修改并保存文件"
+  ],
+  "platform": "竖屏教学短视频，9:16",
+  "target_duration": "75–110 秒；只在连续配音被接受后锁定实际时长",
+  "style": "真实终端状态与简化分支图结合；一次只突出一个决策",
+  "source_scope": "Git 官方文档、Pro Git 官方在线版和仓库内确定性临时演示",
+  "model_limits": [
+    "只覆盖两个分支对一个普通文本文件同一区域的修改",
+    "不覆盖 rebase、cherry-pick、二进制文件、子模块、自定义合并驱动或复杂三方分析",
+    "命令输出可能随 Git 版本、语言、配置和编辑器变化",
+    "演示中的最终文本来自预先声明的合成需求，不代表真实项目应该如何取舍"
+  ],
+  "transfer_task": "两个分支各自改对了同一行的一部分时，判断应该整段选择一边，还是先确认意图并写出新的最终版本",
+  "success_evidence": "学习者能解释 Git 为什么暂停，指出冲突标记两侧含义，并说出‘理解意图、编辑、检查、add、continue’或选择 abort 的条件",
+  "authorization_scope": [
+    "公开资料研究",
+    "运行自动清理的本地临时 Git 仓库",
+    "仓库内自绘 SVG",
+    "将合成示例发布到本公开仓库"
+  ],
+  "excluded_without_new_authorization": [
+    "访问或修改调用者真实代码仓库",
+    "付费配音或素材服务",
+    "最终视频渲染",
+    "向视频平台公开发布"
+  ],
+  "status": "brief-locked"
+}

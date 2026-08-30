@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Reproducible non-physics example for resolving a simple Git merge conflict, including official sources, a deterministic temporary-repository demonstration, durable teaching artifacts, and a self-authored SVG.
+
 ## [0.1.1] - 2026-08-29
 
 ### Added

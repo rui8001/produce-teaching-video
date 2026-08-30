@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "format": "9:16 vertical",
+  "timing_basis": "semantic-only-until-accepted-continuous-audio",
+  "global_accessibility": [
+    "终端状态同时使用文字、位置和图标，不只依赖红绿颜色",
+    "命令与冲突标记使用高对比等宽字体并保持可读字号",
+    "字幕将在真实音频对齐后生成，不从脚本文字估算秒数"
+  ],
+  "shots": [
+    {
+      "id": "S1",
+      "spoken_line_ids": ["L1"],
+      "teaching_function": "reframe-failure",
+      "viewer_takeaway": "合并停止不是 Git 损坏，而是存在需要人判断的两份答案",
+      "visual_role": "evidence",
+      "initial_state": "终端显示合并开始",
+      "meaningful_changes": ["出现 CONFLICT 状态", "错误猜测‘Git 坏了？’出现", "标签改为‘等待人工决定’"],
+      "evidence": "由 demo.sh 的真实冲突状态支持，不重绘虚构成功结果",
+      "labels": ["CONFLICT", "等待人工决定"],
+      "transition": "冲突文件向左右分裂为两个分支版本",
+      "accessibility": "冲突状态同时显示图标和完整文字",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S2",
+      "spoken_line_ids": ["L1"],
+      "teaching_function": "show-cause",
+      "viewer_takeaway": "两个分支修改同一区域，Git 无法自动知道最终意图",
+      "visual_role": "model",
+      "initial_state": "共同版本为周五 17:00",
+      "meaningful_changes": ["main 改成周五 15:00", "feature 改成周四 17:00", "两条分支线汇合并停住"],
+      "evidence": "状态来自 demonstration.md 的合成情形",
+      "labels": ["共同版本", "main", "feature", "同一区域，两份答案"],
+      "transition": "分支内容折叠为冲突标记",
+      "accessibility": "每个分支同时用名称和不同线型编码",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S3",
+      "spoken_line_ids": ["L2"],
+      "teaching_function": "read-observable-state",
+      "viewer_takeaway": "先用 git status 找到未解决文件，再读冲突标记两侧",
+      "visual_role": "evidence",
+      "initial_state": "git status 显示 both modified: plan.txt",
+      "meaningful_changes": ["高亮 HEAD 区域", "高亮分隔线", "高亮 feature 区域"],
+      "evidence": "对应来源台账 C2 与演示证据 D1",
+      "labels": ["当前分支", "分隔线", "正在合入的分支"],
+      "transition": "两侧文本保持可见，决策面板进入",
+      "accessibility": "使用括号和标签指向每个区域，不单靠语法颜色",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S4",
+      "spoken_line_ids": ["L3"],
+      "teaching_function": "human-decision-rule",
+      "viewer_takeaway": "解决冲突是确定最终含义，不等于机械选择一侧",
+      "visual_role": "model",
+      "initial_state": "ours 与 theirs 两个按钮都未选择",
+      "meaningful_changes": ["两个按钮淡出", "‘确认两次修改的意图’出现", "最终文本周四 15:00 由两部分组合生成", "冲突标记消失"],
+      "evidence": "最终文本只对当前已声明的合成需求有效",
+      "labels": ["不要盲选", "确认意图", "最终文本"],
+      "transition": "最终文件下移到终端暂存步骤",
+      "accessibility": "用删除线标明标记已移除，并完整显示最终文本",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S5",
+      "spoken_line_ids": ["L4"],
+      "teaching_function": "complete-procedure",
+      "viewer_takeaway": "检查后的文件先用 git add 标记已解决，再继续合并",
+      "visual_role": "evidence",
+      "initial_state": "最终文件已保存但尚未暂存",
+      "meaningful_changes": ["检查勾选出现", "运行 git add plan.txt", "状态由 UU 变为已暂存", "运行 git merge --continue", "出现双父合并提交"],
+      "evidence": "步骤和完成状态对应来源台账 C3、D1",
+      "labels": ["检查", "git add plan.txt", "git merge --continue", "merge complete"],
+      "transition": "完成路径与放弃路径形成分叉",
+      "accessibility": "每次命令后显示状态变化，不只播放输入动作",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S6",
+      "spoken_line_ids": ["L5", "L6"],
+      "teaching_function": "safe-stop-and-summary",
+      "viewer_takeaway": "不继续时可在合适条件下 abort；Git 指位置，人定含义",
+      "visual_role": "model",
+      "initial_state": "流程分成继续与停止两条路径",
+      "meaningful_changes": ["停止路径显示 git merge --abort", "干净工作区条件出现", "总结句在两条路径下方锁定"],
+      "evidence": "abort 的能力与限制对应来源台账 C4",
+      "labels": ["继续", "停止", "合并前工作区干净", "Git 指位置，人定含义"],
+      "transition": "流程元素清空，保留新的迁移冲突",
+      "accessibility": "停止条件作为完整句呈现，避免只显示命令",
+      "timing_state": "unlocked-until-audio"
+    },
+    {
+      "id": "S7",
+      "spoken_line_ids": ["L7"],
+      "teaching_function": "transfer-check",
+      "viewer_takeaway": "两边各有正确意图时，可以创建第三个最终版本",
+      "visual_role": "evidence",
+      "initial_state": "左右各显示一个只完成一半需求的版本，答案区留空",
+      "meaningful_changes": ["问题出现并保留思考状态", "两侧意图汇入新文本", "答案‘确认意图，再写最终版本’出现"],
+      "evidence": "迁移只检验决策方法，不声称具体内容可由 Git 自动生成",
+      "labels": ["版本 A", "版本 B", "新的最终版本"],
+      "transition": "停在迁移答案与官方来源提示",
+      "accessibility": "问题与答案状态明确分开，不只依赖旁白停顿",
+      "timing_state": "unlocked-until-audio"
+    }
+  ]
+}
