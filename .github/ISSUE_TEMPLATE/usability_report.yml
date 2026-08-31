@@ -1,0 +1,60 @@
+name: Usability trial report
+description: Optionally report a reproducible first-use problem with public or synthetic data
+title: "[Usability]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Opening this Issue makes your GitHub account public. Use private feedback instead if
+        you do not want that. Never include credentials, student/client information, private
+        repositories, unpublished course content, or copyrighted source files.
+  - type: dropdown
+    attributes:
+      label: First affected step
+      options:
+        - Installation
+        - Skill discovery
+        - Explicit invocation
+        - Learning brief
+        - Source ledger
+        - Visual plan
+        - Authorization checkpoint
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened
+      description: Describe the first problem using only a public or synthetic topic.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest non-sensitive sequence that reproduces the problem.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Codex environment
+      options:
+        - Desktop app
+        - CLI
+        - IDE extension
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed credentials, private content, personal data, and identifying details.
+          required: true
+        - label: The maintainer may link this public Issue to an anonymous trial ID.
+          required: false

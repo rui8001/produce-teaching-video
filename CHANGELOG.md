@@ -5,6 +5,7 @@
 ### Added
 
 - Reproducible non-physics example for resolving a simple Git merge conflict, including official sources, a deterministic temporary-repository demonstration, durable teaching artifacts, and a self-authored SVG.
+- Consent-safe real-user testing kit with neutral invitation text, a no-coaching run sheet, anonymous feedback fields, a zero-based public results ledger, and an optional usability Issue form.
 
 ## [0.1.1] - 2026-08-29
 

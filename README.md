@@ -133,7 +133,7 @@ produce-teaching-video/
 物理案例和非物理操作案例已经公开并可复现，当前优先推进真实用户试用、已确认问题修复和 v0.2.0 验收。
 
 - [两周公开维护路线图](./ROADMAP.md)
-- [真实用户试用说明](./docs/USER_TESTING.md)
+- [真实用户试用包与当前结果](./docs/USER_TESTING.md)
 - [Codex for Open Source 申请准备度](./docs/CODEX_OSS_APPLICATION.md)
 
 后续再根据真实使用反馈增加 JSON Schema、更多学科模式和工具实现参考，避免为了显得丰富而堆积没有验证过的模板。

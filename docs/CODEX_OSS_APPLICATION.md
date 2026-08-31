@@ -9,7 +9,7 @@ This document tracks repository evidence only. Personal application fields must 
 | Public open source | Public repository and MIT license | Ready |
 | Maintainer role | Repository ownership and ongoing maintenance | Ready; continue building history |
 | Clear ecosystem value | A reusable method for teaching-video production across subjects | [Physics example](../examples/solar-eclipse/README.md) and [Git procedure example](../examples/git-merge-conflict/README.md) complete |
-| Meaningful usage | Real testers, public Issues when appropriate, and consented case summaries | Not yet collected |
+| Meaningful usage | Real testers, public Issues when appropriate, and consented case summaries | [Trial kit and zero-based ledger](./USER_TEST_RESULTS.md) ready; 0 invitations and 0 responses recorded |
 | Active maintenance | Issue triage, meaningful commits, releases, and transparent changelog | Active; dated [evidence log](#evidence-log) and changelog maintained |
 | Reproducibility | Fresh-install test and complete examples | [Fresh install passed](./FRESH_INSTALL_TEST.md); both [physics](../examples/solar-eclipse/README.md) and [procedural](../examples/git-merge-conflict/README.md) walkthroughs complete |
 | Responsible automation | Automated quality, privacy, and release checks | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) |
@@ -42,6 +42,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-08-28 | Source-checked physics walkthrough | [Solar-eclipse example](../examples/solar-eclipse/README.md) | Brief, source ledger, script, visual plan, self-authored SVG, status, and QC boundaries published |
 | 2026-08-29 | Verified v0.1.1 tag | [Release verification](./RELEASE_VERIFICATION_V0.1.1.md) | Release commit passed CI and a fresh tagged checkout passed validation and Codex discovery; GitHub Release page pending maintainer confirmation |
 | 2026-08-30 | Reproducible non-physics walkthrough | [Git merge-conflict example](../examples/git-merge-conflict/README.md) | Official sources, deterministic temporary-repository evidence, script, visual plan, self-authored SVG, status, and QC boundaries published |
+| 2026-08-31 | Consent-safe real-user trial kit | [Testing guide](./USER_TESTING.md) and [results ledger](./USER_TEST_RESULTS.md) | Invitation, no-coaching run sheet, anonymous feedback form, and public Issue template are ready; no invitations or feedback counted yet |
 
 ## Application gate
 
