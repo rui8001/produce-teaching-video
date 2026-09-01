@@ -14,6 +14,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Quality automation | Validate the Skill, examples, links, SVG files, and sensitive-data boundaries on every change | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) | Complete |
 | Fresh install | Verify discovery and the five-minute start from a clean checkout | [Verification record](./docs/FRESH_INSTALL_TEST.md) | Complete |
 | Non-physics example | Demonstrate transfer to a different teaching domain | [Complete Git walkthrough](./examples/git-merge-conflict/README.md) · [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Complete |
+| Machine-readable brief | Publish an optional versioned JSON Schema and validate both public briefs in CI | [Learning brief schema](./schemas/brief.schema.json) | Complete |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Testing kit](./docs/USER_TESTING.md) · [zero-based results ledger](./docs/USER_TEST_RESULTS.md) · [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Ready for volunteers; 0 invitations recorded |
 | Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | [v0.1.1 tag verification](./docs/RELEASE_VERIFICATION_V0.1.1.md); GitHub Release page awaits maintainer confirmation | In progress |
 | Application pack | Summarize maintenance, usage, ecosystem value, and planned API-credit use | Maintainer-only application checklist | Planned |
@@ -46,7 +47,7 @@ Releases are tied to completed outcomes, not to a calendar alone. If a release g
 
 ## Later milestones
 
-- Add optional JSON Schemas for the learning brief, source ledger, visual plan, and production status.
+- Extend the optional JSON Schema pack only when another artifact needs real tool integration; the learning brief v1 contract is complete.
 - Add more subject patterns only when real use reveals a reusable teaching need.
 - Publish anonymized maintenance retrospectives and upgrade notes.
 - Explore API-assisted issue triage, regression evaluation, pull-request review, and release drafting for the open-source project.

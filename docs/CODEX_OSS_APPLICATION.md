@@ -43,6 +43,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-08-29 | Verified v0.1.1 tag | [Release verification](./RELEASE_VERIFICATION_V0.1.1.md) | Release commit passed CI and a fresh tagged checkout passed validation and Codex discovery; GitHub Release page pending maintainer confirmation |
 | 2026-08-30 | Reproducible non-physics walkthrough | [Git merge-conflict example](../examples/git-merge-conflict/README.md) | Official sources, deterministic temporary-repository evidence, script, visual plan, self-authored SVG, status, and QC boundaries published |
 | 2026-08-31 | Consent-safe real-user trial kit | [Testing guide](./USER_TESTING.md) and [results ledger](./USER_TEST_RESULTS.md) | Invitation, no-coaching run sheet, anonymous feedback form, and public Issue template are ready; no invitations or feedback counted yet |
+| 2026-09-01 | Versioned learning-brief contract | [JSON Schema](../schemas/brief.schema.json) | Both subject-diverse public briefs are validated against the optional Draft 2020-12 schema in CI |
 
 ## Application gate
 

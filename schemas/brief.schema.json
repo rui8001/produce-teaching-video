@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/rui8001/produce-teaching-video/main/schemas/brief.schema.json",
+  "title": "Produce Teaching Video learning brief",
+  "description": "Optional version 1 machine-readable contract for a learning brief. It describes the artifact and does not authorize paid services, uploads, rendering, or publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slug",
+    "title",
+    "language",
+    "audience",
+    "learning_objective",
+    "likely_misconception",
+    "prerequisites",
+    "platform",
+    "target_duration",
+    "style",
+    "source_scope",
+    "model_limits",
+    "transfer_task",
+    "success_evidence",
+    "authorization_scope",
+    "excluded_without_new_authorization",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "description": "Artifact schema version. Incompatible changes require a new version."
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "audience": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "learning_objective": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "likely_misconception": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "prerequisites": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "platform": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "target_duration": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "style": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "source_scope": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "model_limits": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "transfer_task": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "success_evidence": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "authorization_scope": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "excluded_without_new_authorization": {
+      "$ref": "#/$defs/stringArray"
+    },
+    "status": {
+      "$ref": "#/$defs/nonEmptyString"
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "stringArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    }
+  }
+}

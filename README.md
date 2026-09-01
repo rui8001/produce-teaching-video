@@ -116,6 +116,7 @@ produce-teaching-video/
 ├── SKILL.md                 # Codex 加载入口
 ├── agents/openai.yaml       # Skill 展示信息
 ├── references/              # 课程设计和生产方法
+├── schemas/                 # 可选、版本化的机器可读产物约定
 ├── examples/                # 可公开复用的示例输入
 ├── assets/                  # 项目封面和图标
 ├── README.md                # 面向使用者的项目首页

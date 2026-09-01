@@ -32,3 +32,5 @@ work/<date>-<slug>/
 - `09-final-qc.md`: subject, learning, audiovisual, source, copyright, privacy and output evidence.
 
 Use portable relative paths internally. Store a separate absolute path only when an external editor handoff requires it.
+
+When machine-readable compatibility is useful, validate `00-brief.json` against the optional [learning brief v1 schema](../schemas/brief.schema.json). The schema checks the shared artifact contract; it does not replace an equivalent host-project structure or grant authorization for later production steps.

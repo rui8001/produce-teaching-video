@@ -12,6 +12,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 import yaml
+from jsonschema import Draft202012Validator
+from jsonschema.exceptions import SchemaError
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -123,11 +125,48 @@ def validate_openai_yaml(errors: list[str]) -> None:
 
 
 def validate_json(errors: list[str]) -> None:
-    for path in sorted(ROOT.glob("examples/**/*.json")):
+    for path in sorted(ROOT.glob("**/*.json")):
+        if ".git" in path.parts:
+            continue
         try:
             json.loads(path.read_text(encoding="utf-8"))
         except (UnicodeDecodeError, json.JSONDecodeError) as exc:
             errors.append(f"{path.relative_to(ROOT)} is invalid JSON: {exc}")
+
+
+def validate_brief_schema(errors: list[str]) -> None:
+    schema_path = ROOT / "schemas" / "brief.schema.json"
+    try:
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+        errors.append(f"schemas/brief.schema.json cannot be loaded: {exc}")
+        return
+
+    try:
+        Draft202012Validator.check_schema(schema)
+    except SchemaError as exc:
+        errors.append(f"schemas/brief.schema.json is not a valid Draft 2020-12 schema: {exc.message}")
+        return
+
+    validator = Draft202012Validator(schema)
+    fixtures = sorted(ROOT.glob("examples/*/brief.json"))
+    if not fixtures:
+        errors.append("brief schema has no public example fixtures")
+        return
+
+    for path in fixtures:
+        try:
+            instance = json.loads(path.read_text(encoding="utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            continue
+        for error in sorted(
+            validator.iter_errors(instance),
+            key=lambda item: tuple(str(part) for part in item.absolute_path),
+        ):
+            location = ".".join(str(part) for part in error.absolute_path) or "<root>"
+            errors.append(
+                f"{path.relative_to(ROOT)} fails schemas/brief.schema.json at {location}: {error.message}"
+            )
 
 
 def validate_svg(errors: list[str]) -> None:
@@ -204,6 +243,7 @@ def main() -> int:
     validate_skill(errors)
     validate_openai_yaml(errors)
     validate_json(errors)
+    validate_brief_schema(errors)
     validate_svg(errors)
     validate_markdown_links(errors)
     validate_sensitive_data(errors)
@@ -214,7 +254,10 @@ def main() -> int:
             print(f"- {error}", file=sys.stderr)
         return 1
 
-    print("Repository validation passed: Skill, metadata, examples, links, SVG, and sensitive-data checks are clean.")
+    print(
+        "Repository validation passed: Skill, metadata, schemas, examples, links, SVG, "
+        "and sensitive-data checks are clean."
+    )
     return 0
 
 
