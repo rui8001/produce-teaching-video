@@ -7,6 +7,7 @@
 - Reproducible non-physics example for resolving a simple Git merge conflict, including official sources, a deterministic temporary-repository demonstration, durable teaching artifacts, and a self-authored SVG.
 - Consent-safe real-user testing kit with neutral invitation text, a no-coaching run sheet, anonymous feedback fields, a zero-based public results ledger, and an optional usability Issue form.
 - Optional Draft 2020-12 JSON Schema for version 1 learning briefs, continuously checked against both public examples.
+- Maintainer-facing Codex for Open Source application worksheet with official field mapping, character-limited draft answers, evidence refresh steps, and explicit private/submission boundaries.
 
 ## [0.1.1] - 2026-08-29
 

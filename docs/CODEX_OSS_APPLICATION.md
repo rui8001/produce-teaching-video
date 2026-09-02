@@ -2,6 +2,8 @@
 
 This document tracks repository evidence only. Personal application fields must remain outside the public repository.
 
+The field-by-field [maintainer application worksheet](./CODEX_OSS_APPLICATION_PACKET.md) contains current public evidence, character-limited draft answers, private-field boundaries, and the final submission checklist. It is not an authorization to submit.
+
 ## Repository evidence
 
 | Signal | Evidence to collect | Current state |
@@ -12,8 +14,8 @@ This document tracks repository evidence only. Personal application fields must 
 | Meaningful usage | Real testers, public Issues when appropriate, and consented case summaries | [Trial kit and zero-based ledger](./USER_TEST_RESULTS.md) ready; 0 invitations and 0 responses recorded |
 | Active maintenance | Issue triage, meaningful commits, releases, and transparent changelog | Active; dated [evidence log](#evidence-log) and changelog maintained |
 | Reproducibility | Fresh-install test and complete examples | [Fresh install passed](./FRESH_INSTALL_TEST.md); both [physics](../examples/solar-eclipse/README.md) and [procedural](../examples/git-merge-conflict/README.md) walkthroughs complete |
-| Responsible automation | Automated quality, privacy, and release checks | [Passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/32956656619) |
-| API-credit plan | PR review, issue triage, regression evaluation, and release automation | Draft direction ready |
+| Responsible automation | Automated quality, privacy, schema, application-draft, and release checks | [Latest passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863) |
+| API-credit plan | PR review, issue triage, regression evaluation, and release automation | [Character-limited draft](./CODEX_OSS_APPLICATION_PACKET.md#draft-api-credit-use) ready; maintainer review pending |
 
 ## Private fields the maintainer must prepare
 
@@ -44,6 +46,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-08-30 | Reproducible non-physics walkthrough | [Git merge-conflict example](../examples/git-merge-conflict/README.md) | Official sources, deterministic temporary-repository evidence, script, visual plan, self-authored SVG, status, and QC boundaries published |
 | 2026-08-31 | Consent-safe real-user trial kit | [Testing guide](./USER_TESTING.md) and [results ledger](./USER_TEST_RESULTS.md) | Invitation, no-coaching run sheet, anonymous feedback form, and public Issue template are ready; no invitations or feedback counted yet |
 | 2026-09-01 | Versioned learning-brief contract | [JSON Schema](../schemas/brief.schema.json) | Both subject-diverse public briefs are validated against the optional Draft 2020-12 schema in CI |
+| 2026-09-02 | Maintainer application worksheet | [Application packet](./CODEX_OSS_APPLICATION_PACKET.md) | Official field map, truthful zero-adoption snapshot, 500-character drafts, private-field boundaries, and submission gates prepared; no application submitted |
 
 ## Application gate
 

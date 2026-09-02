@@ -27,6 +27,17 @@ REQUIRED_INTERFACE = {
     "default_prompt",
 }
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+APPLICATION_ANSWER = re.compile(
+    r"<!-- application-answer:(?P<name>[a-z_]+):start -->\n"
+    r"```text\n(?P<answer>.*?)\n```\n"
+    r"<!-- application-answer:(?P=name):end -->",
+    re.DOTALL,
+)
+REQUIRED_APPLICATION_ANSWERS = {
+    "repository_qualification",
+    "api_credit_use",
+    "anything_else",
+}
 
 
 def tracked_files() -> list[Path]:
@@ -211,6 +222,34 @@ def validate_markdown_links(errors: list[str]) -> None:
                 )
 
 
+def validate_application_drafts(errors: list[str]) -> None:
+    path = ROOT / "docs" / "CODEX_OSS_APPLICATION_PACKET.md"
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        errors.append(f"docs/CODEX_OSS_APPLICATION_PACKET.md cannot be loaded: {exc}")
+        return
+
+    matches = list(APPLICATION_ANSWER.finditer(text))
+    names = [match.group("name") for match in matches]
+    missing = REQUIRED_APPLICATION_ANSWERS - set(names)
+    unexpected = set(names) - REQUIRED_APPLICATION_ANSWERS
+    if missing:
+        errors.append(f"application packet is missing marked answers: {sorted(missing)}")
+    if unexpected:
+        errors.append(f"application packet has unexpected marked answers: {sorted(unexpected)}")
+    if len(names) != len(set(names)):
+        errors.append("application packet has duplicate marked answers")
+
+    for match in matches:
+        name = match.group("name")
+        answer = match.group("answer").strip()
+        if not answer:
+            errors.append(f"application answer {name} is empty")
+        elif len(answer) > 500:
+            errors.append(f"application answer {name} exceeds 500 characters ({len(answer)})")
+
+
 def validate_sensitive_data(errors: list[str]) -> None:
     mac_user_prefix = "/" + "Users" + "/"
     patterns = [
@@ -246,6 +285,7 @@ def main() -> int:
     validate_brief_schema(errors)
     validate_svg(errors)
     validate_markdown_links(errors)
+    validate_application_drafts(errors)
     validate_sensitive_data(errors)
 
     if errors:
@@ -255,8 +295,8 @@ def main() -> int:
         return 1
 
     print(
-        "Repository validation passed: Skill, metadata, schemas, examples, links, SVG, "
-        "and sensitive-data checks are clean."
+        "Repository validation passed: Skill, metadata, schemas, examples, links, "
+        "application drafts, SVG, and sensitive-data checks are clean."
     )
     return 0
 
