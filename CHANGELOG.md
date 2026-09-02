@@ -8,6 +8,7 @@
 - Consent-safe real-user testing kit with neutral invitation text, a no-coaching run sheet, anonymous feedback fields, a zero-based public results ledger, and an optional usability Issue form.
 - Optional Draft 2020-12 JSON Schema for version 1 learning briefs, continuously checked against both public examples.
 - Maintainer-facing Codex for Open Source application worksheet with official field mapping, character-limited draft answers, evidence refresh steps, and explicit private/submission boundaries.
+- Current-main isolated installation recheck covering public installer parity, Skill and repository validation, metadata, Codex discovery, and symlink boundaries.
 
 ## [0.1.1] - 2026-08-29
 

@@ -12,7 +12,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Foundation | Publish the maintenance plan, evidence checklist, and tester guide | Roadmap and linked GitHub issues | Complete |
 | Physics example | Expand the solar-eclipse brief into a reproducible end-to-end walkthrough | [Complete walkthrough](./examples/solar-eclipse/README.md) · [Issue #5](https://github.com/rui8001/produce-teaching-video/issues/5) | Complete |
 | Quality automation | Validate the Skill, schemas, examples, links, SVG files, application drafts, and sensitive-data boundaries on every change | [Latest passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863) | Complete |
-| Fresh install | Verify discovery and the five-minute start from a clean checkout | [Verification record](./docs/FRESH_INSTALL_TEST.md) | Complete |
+| Fresh install | Verify discovery and the five-minute start from a clean checkout | [Current-main verification record](./docs/FRESH_INSTALL_TEST.md) | Complete; rechecked 2026-09-03 |
 | Non-physics example | Demonstrate transfer to a different teaching domain | [Complete Git walkthrough](./examples/git-merge-conflict/README.md) · [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Complete |
 | Machine-readable brief | Publish an optional versioned JSON Schema and validate both public briefs in CI | [Learning brief schema](./schemas/brief.schema.json) | Complete |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Testing kit](./docs/USER_TESTING.md) · [zero-based results ledger](./docs/USER_TEST_RESULTS.md) · [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Ready for volunteers; 0 invitations recorded |

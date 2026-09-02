@@ -34,13 +34,13 @@ The official form and terms may change. Reopen them immediately before submissio
 
 ## Evidence snapshot
 
-Snapshot date: **2026-09-02**. Refresh every count immediately before applying.
+Snapshot date: **2026-09-03**. Refresh every count immediately before applying.
 
 | Signal | Current public evidence |
 | --- | --- |
 | Public open source | Public MIT-licensed repository |
 | Releases | One public GitHub Release: [`v0.1.0`](https://github.com/rui8001/produce-teaching-video/releases/tag/v0.1.0); the verified `v0.1.1` tag does not yet have a Release page |
-| Reproducibility | [Fresh-install verification](./FRESH_INSTALL_TEST.md), a [physics walkthrough](../examples/solar-eclipse/README.md), and a [Git walkthrough](../examples/git-merge-conflict/README.md) |
+| Reproducibility | [Current-main isolated-install verification](./FRESH_INSTALL_TEST.md), a [physics walkthrough](../examples/solar-eclipse/README.md), and a [Git walkthrough](../examples/git-merge-conflict/README.md) |
 | Automated maintenance | Latest checked run: [Repository quality #9](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863), passed |
 | Public issue work | Four outcome Issues closed; [real-user trial Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) remains open |
 | Adoption snapshot | 0 stars, 0 forks, 0 recorded real-user invitations, and 0 responses; no adoption claim is made |
