@@ -33,4 +33,4 @@ work/<date>-<slug>/
 
 Use portable relative paths internally. Store a separate absolute path only when an external editor handoff requires it.
 
-When machine-readable compatibility is useful, validate `00-brief.json` against the optional [learning brief v1 schema](../schemas/brief.schema.json). The schema checks the shared artifact contract; it does not replace an equivalent host-project structure or grant authorization for later production steps.
+When machine-readable compatibility is useful, validate `00-brief.json` and `visual-plan.json` against the optional [learning brief](../schemas/brief.schema.json) and [visual plan](../schemas/visual-plan.schema.json) v1 schemas. The schemas check the shared artifact contract; they do not replace an equivalent host-project structure or grant authorization for later production steps.

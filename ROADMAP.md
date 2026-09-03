@@ -14,7 +14,7 @@ This repository is maintained as a subject-agnostic teaching-video Skill. The ne
 | Quality automation | Validate the Skill, schemas, examples, links, SVG files, application drafts, and sensitive-data boundaries on every change | [Latest passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863) | Complete |
 | Fresh install | Verify discovery and the five-minute start from a clean checkout | [Current-main verification record](./docs/FRESH_INSTALL_TEST.md) | Complete; rechecked 2026-09-03 |
 | Non-physics example | Demonstrate transfer to a different teaching domain | [Complete Git walkthrough](./examples/git-merge-conflict/README.md) · [Issue #4](https://github.com/rui8001/produce-teaching-video/issues/4) | Complete |
-| Machine-readable brief | Publish an optional versioned JSON Schema and validate both public briefs in CI | [Learning brief schema](./schemas/brief.schema.json) | Complete |
+| Machine-readable artifacts | Publish optional versioned JSON Schemas for existing machine-readable outputs | [Learning brief](./schemas/brief.schema.json) and [visual plan](./schemas/visual-plan.schema.json) schemas | Brief and visual plan complete |
 | Real-user trial | Collect voluntary feedback from 3–5 real testers | [Testing kit](./docs/USER_TESTING.md) · [zero-based results ledger](./docs/USER_TEST_RESULTS.md) · [Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) | Ready for volunteers; 0 invitations recorded |
 | Release | Publish meaningful fixes as v0.1.1 and the completed milestone as v0.2.0 | [v0.1.1 tag verification](./docs/RELEASE_VERIFICATION_V0.1.1.md); GitHub Release page awaits maintainer confirmation | In progress |
 | Application pack | Summarize maintenance, usage, ecosystem value, and planned API-credit use | [Maintainer worksheet](./docs/CODEX_OSS_APPLICATION_PACKET.md) | Draft complete; submission blocked by real-user evidence and personal review |
@@ -47,7 +47,7 @@ Releases are tied to completed outcomes, not to a calendar alone. If a release g
 
 ## Later milestones
 
-- Extend the optional JSON Schema pack only when another artifact needs real tool integration; the learning brief v1 contract is complete.
+- Extend the optional JSON Schema pack only when another existing artifact needs real tool integration; learning brief and visual plan v1 contracts are complete.
 - Add more subject patterns only when real use reveals a reusable teaching need.
 - Publish anonymized maintenance retrospectives and upgrade notes.
 - Explore API-assisted issue triage, regression evaluation, pull-request review, and release drafting for the open-source project.

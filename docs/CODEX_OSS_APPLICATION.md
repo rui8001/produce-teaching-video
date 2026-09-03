@@ -48,6 +48,7 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-09-01 | Versioned learning-brief contract | [JSON Schema](../schemas/brief.schema.json) | Both subject-diverse public briefs are validated against the optional Draft 2020-12 schema in CI |
 | 2026-09-02 | Maintainer application worksheet | [Application packet](./CODEX_OSS_APPLICATION_PACKET.md) | Official field map, truthful zero-adoption snapshot, 500-character drafts, private-field boundaries, and submission gates prepared; no application submitted |
 | 2026-09-03 | Current-main isolated installation recheck | [Verification record](./FRESH_INSTALL_TEST.md) | Public installer output matched a fresh checkout at `3bb2896`; Skill validation, repository checks, metadata, Codex discovery, and symlink boundary passed |
+| 2026-09-03 | Versioned visual-plan contract | [JSON Schema](../schemas/visual-plan.schema.json) | Both public visual plans are validated in CI, including unique shot IDs and complete dialogue-line coverage |
 
 ## Application gate
 

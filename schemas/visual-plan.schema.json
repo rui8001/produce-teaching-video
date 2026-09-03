@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/rui8001/produce-teaching-video/main/schemas/visual-plan.schema.json",
+  "title": "Produce Teaching Video visual plan",
+  "description": "Optional version 1 machine-readable contract for a semantic visual plan. Timing remains unlocked until accepted continuous audio exists.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "format",
+    "timing_basis",
+    "global_accessibility",
+    "shots"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "description": "Artifact schema version. Incompatible changes require a new version."
+    },
+    "format": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "timing_basis": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "global_accessibility": {
+      "$ref": "#/$defs/nonEmptyStringArray"
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/shot"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonEmptyString"
+      }
+    },
+    "shot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "spoken_line_ids",
+        "teaching_function",
+        "viewer_takeaway",
+        "visual_role",
+        "initial_state",
+        "meaningful_changes",
+        "evidence",
+        "labels",
+        "transition",
+        "accessibility",
+        "timing_state"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^S[1-9][0-9]*$"
+        },
+        "spoken_line_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^L[1-9][0-9]*$"
+          }
+        },
+        "teaching_function": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "viewer_takeaway": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "visual_role": {
+          "enum": [
+            "persona",
+            "evidence",
+            "model"
+          ]
+        },
+        "initial_state": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "meaningful_changes": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "evidence": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "labels": {
+          "$ref": "#/$defs/nonEmptyStringArray"
+        },
+        "transition": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "accessibility": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "timing_state": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    }
+  }
+}

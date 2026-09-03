@@ -5,6 +5,7 @@ These versioned JSON Schemas support validation and tool integration when a proj
 | Schema | Live fixtures | Status |
 | --- | --- | --- |
 | [Learning brief v1](./brief.schema.json) | Both public `examples/*/brief.json` files | Validated in CI |
+| [Visual plan v1](./visual-plan.schema.json) | Both public `examples/*/visual-plan.json` files and their dialogue line IDs | Validated in CI |
 
 Run the repository validator after changing a schema or fixture:
 

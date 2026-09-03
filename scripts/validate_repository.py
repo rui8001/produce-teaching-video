@@ -145,24 +145,26 @@ def validate_json(errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)} is invalid JSON: {exc}")
 
 
-def validate_brief_schema(errors: list[str]) -> None:
-    schema_path = ROOT / "schemas" / "brief.schema.json"
+def validate_schema_fixtures(
+    errors: list[str], schema_relative: str, fixture_pattern: str
+) -> None:
+    schema_path = ROOT / schema_relative
     try:
         schema = json.loads(schema_path.read_text(encoding="utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
-        errors.append(f"schemas/brief.schema.json cannot be loaded: {exc}")
+        errors.append(f"{schema_relative} cannot be loaded: {exc}")
         return
 
     try:
         Draft202012Validator.check_schema(schema)
     except SchemaError as exc:
-        errors.append(f"schemas/brief.schema.json is not a valid Draft 2020-12 schema: {exc.message}")
+        errors.append(f"{schema_relative} is not a valid Draft 2020-12 schema: {exc.message}")
         return
 
     validator = Draft202012Validator(schema)
-    fixtures = sorted(ROOT.glob("examples/*/brief.json"))
+    fixtures = sorted(ROOT.glob(fixture_pattern))
     if not fixtures:
-        errors.append("brief schema has no public example fixtures")
+        errors.append(f"{schema_relative} has no public example fixtures")
         return
 
     for path in fixtures:
@@ -176,8 +178,63 @@ def validate_brief_schema(errors: list[str]) -> None:
         ):
             location = ".".join(str(part) for part in error.absolute_path) or "<root>"
             errors.append(
-                f"{path.relative_to(ROOT)} fails schemas/brief.schema.json at {location}: {error.message}"
+                f"{path.relative_to(ROOT)} fails {schema_relative} at {location}: {error.message}"
             )
+
+
+def validate_visual_plan_links(errors: list[str]) -> None:
+    for path in sorted(ROOT.glob("examples/*/visual-plan.json")):
+        dialogue_path = path.with_name("dialogue.json")
+        try:
+            plan = json.loads(path.read_text(encoding="utf-8"))
+            dialogue = json.loads(dialogue_path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            errors.append(f"{path.relative_to(ROOT)} cannot cross-check dialogue lines: {exc}")
+            continue
+
+        shots = plan.get("shots") if isinstance(plan, dict) else None
+        lines = dialogue.get("lines") if isinstance(dialogue, dict) else None
+        if not isinstance(shots, list) or not isinstance(lines, list):
+            continue
+
+        shot_ids = [
+            shot["id"]
+            for shot in shots
+            if isinstance(shot, dict) and isinstance(shot.get("id"), str)
+        ]
+        if len(shot_ids) != len(set(shot_ids)):
+            errors.append(f"{path.relative_to(ROOT)} contains duplicate shot IDs")
+
+        dialogue_ids = {
+            line["id"]
+            for line in lines
+            if isinstance(line, dict) and isinstance(line.get("id"), str)
+        }
+        referenced_ids = {
+            line_id
+            for shot in shots
+            if isinstance(shot, dict) and isinstance(shot.get("spoken_line_ids"), list)
+            for line_id in shot["spoken_line_ids"]
+            if isinstance(line_id, str)
+        }
+        unknown = referenced_ids - dialogue_ids
+        uncovered = dialogue_ids - referenced_ids
+        if unknown:
+            errors.append(
+                f"{path.relative_to(ROOT)} references unknown dialogue IDs: {sorted(unknown)}"
+            )
+        if uncovered:
+            errors.append(
+                f"{path.relative_to(ROOT)} leaves dialogue IDs uncovered: {sorted(uncovered)}"
+            )
+
+
+def validate_artifact_schemas(errors: list[str]) -> None:
+    validate_schema_fixtures(errors, "schemas/brief.schema.json", "examples/*/brief.json")
+    validate_schema_fixtures(
+        errors, "schemas/visual-plan.schema.json", "examples/*/visual-plan.json"
+    )
+    validate_visual_plan_links(errors)
 
 
 def validate_svg(errors: list[str]) -> None:
@@ -282,7 +339,7 @@ def main() -> int:
     validate_skill(errors)
     validate_openai_yaml(errors)
     validate_json(errors)
-    validate_brief_schema(errors)
+    validate_artifact_schemas(errors)
     validate_svg(errors)
     validate_markdown_links(errors)
     validate_application_drafts(errors)
