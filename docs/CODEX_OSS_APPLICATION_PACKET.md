@@ -2,17 +2,17 @@
 
 This maintainer worksheet maps the public repository evidence to the current application fields without storing private identity values. It is a draft, not a submitted application or a claim of eligibility.
 
-**Official sources checked on 2026-09-02:**
+**Official program sources checked on 2026-09-04:**
 
-- [Codex for Open Source application](https://openai.com/form/codex-for-oss/)
+- [Codex for Open Source overview](https://developers.openai.com/community/codex-for-oss)
 - [Codex for Open Source Program Terms](https://learn.chatgpt.com/docs/codex-for-oss-terms)
 - [OpenAI Organization settings](https://platform.openai.com/settings/organization/general)
 
-The official form and terms may change. Reopen them immediately before submission. The current form says applications are reviewed on a rolling basis and asks for accurate maintainer, repository, and planned-use information; submission does not guarantee selection.
+The application field map below was last checked against the [application form](https://openai.com/form/codex-for-oss/) on 2026-09-02. Reopen the form and terms immediately before submission because they may change. The Program Terms require accurate and complete maintainer, repository, and role information; submission does not guarantee selection.
 
 ## Current decision
 
-**Not ready to submit.** The public maintenance and reproducibility evidence is credible, but meaningful usage is still missing: 0 real-user invitations and 0 responses are recorded. The v0.2.0 release gate therefore remains closed.
+**Ready for maintainer final review, but not authorized for submission.** The official overview invites core maintainers or maintainers of widely used public projects to apply, and explicitly allows other ecosystem-important projects to explain their case. The Program Terms list repository usage as one factor OpenAI may consider, not a stated minimum. This repository therefore discloses its early adoption truthfully instead of treating 3–5 testers as an official eligibility rule. The separate v0.2.0 release gate remains closed because 0 real-user invitations and 0 responses are recorded.
 
 ## Official field map
 
@@ -34,14 +34,14 @@ The official form and terms may change. Reopen them immediately before submissio
 
 ## Evidence snapshot
 
-Snapshot date: **2026-09-03**. Refresh every count immediately before applying.
+Snapshot date: **2026-09-04**. Refresh every count immediately before applying.
 
 | Signal | Current public evidence |
 | --- | --- |
 | Public open source | Public MIT-licensed repository |
 | Releases | One public GitHub Release: [`v0.1.0`](https://github.com/rui8001/produce-teaching-video/releases/tag/v0.1.0); the verified `v0.1.1` tag does not yet have a Release page |
 | Reproducibility | [Current-main isolated-install verification](./FRESH_INSTALL_TEST.md), a [physics walkthrough](../examples/solar-eclipse/README.md), and a [Git walkthrough](../examples/git-merge-conflict/README.md) |
-| Automated maintenance | Latest checked run: [Repository quality #9](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863), passed |
+| Automated maintenance | Latest checked run for commit `e1ac1b8`: [Repository quality](https://github.com/rui8001/produce-teaching-video/actions/runs/33742559884), passed |
 | Public issue work | Four outcome Issues closed; [real-user trial Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) remains open |
 | Adoption snapshot | 0 stars, 0 forks, 0 recorded real-user invitations, and 0 responses; no adoption claim is made |
 | Active history | Dated [evidence log](./CODEX_OSS_APPLICATION.md#evidence-log), roadmap, changelog, tested commits, and release gates |
@@ -78,7 +78,7 @@ The repository validator enforces the current 500-character limit for each marke
 
 1. Reopen the official application and Program Terms; record any changed field or limit before editing the drafts.
 2. Refresh repository visibility, releases, CI, Issues, stars, forks, and the consent-safe trial ledger.
-3. Replace the early-adoption sentence only with verifiable usage evidence.
+3. Keep the early-adoption sentence unless verifiable usage evidence changes it; real-user testing strengthens the application but is not represented as an official minimum.
 4. Confirm the maintainer role, legal name, ChatGPT email, public GitHub profile, and OpenAI Organization ID outside the repository.
 5. Confirm the exact benefits requested and that the API-credit plan applies only to repositories the applicant owns, maintains, or is authorized to administer.
 6. Remove confidential information; the Program Terms say application materials should not contain it.

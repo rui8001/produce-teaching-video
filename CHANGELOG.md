@@ -10,6 +10,7 @@
 - Maintainer-facing Codex for Open Source application worksheet with official field mapping, character-limited draft answers, evidence refresh steps, and explicit private/submission boundaries.
 - Current-main isolated installation recheck covering public installer parity, Skill and repository validation, metadata, Codex discovery, and symlink boundaries.
 - Optional visual-plan v1 JSON Schema with CI checks for two public fixtures, unique shot IDs, and complete dialogue-line coverage.
+- Application-readiness guidance aligned with the official program criteria, separating the repository's v0.2.0 tester gate from OpenAI's stated application considerations.
 
 ## [0.1.1] - 2026-08-29
 

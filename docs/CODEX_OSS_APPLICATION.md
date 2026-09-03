@@ -14,7 +14,7 @@ The field-by-field [maintainer application worksheet](./CODEX_OSS_APPLICATION_PA
 | Meaningful usage | Real testers, public Issues when appropriate, and consented case summaries | [Trial kit and zero-based ledger](./USER_TEST_RESULTS.md) ready; 0 invitations and 0 responses recorded |
 | Active maintenance | Issue triage, meaningful commits, releases, and transparent changelog | Active; dated [evidence log](#evidence-log) and changelog maintained |
 | Reproducibility | Fresh-install test and complete examples | [Fresh install passed](./FRESH_INSTALL_TEST.md); both [physics](../examples/solar-eclipse/README.md) and [procedural](../examples/git-merge-conflict/README.md) walkthroughs complete |
-| Responsible automation | Automated quality, privacy, schema, application-draft, and release checks | [Latest passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/33495915863) |
+| Responsible automation | Automated quality, privacy, schema, application-draft, and release checks | [Latest passing workflow](https://github.com/rui8001/produce-teaching-video/actions/runs/33742559884) |
 | API-credit plan | PR review, issue triage, regression evaluation, and release automation | [Character-limited draft](./CODEX_OSS_APPLICATION_PACKET.md#draft-api-credit-use) ready; maintainer review pending |
 
 ## Private fields the maintainer must prepare
@@ -49,14 +49,16 @@ Add only verifiable public links or anonymous aggregate counts.
 | 2026-09-02 | Maintainer application worksheet | [Application packet](./CODEX_OSS_APPLICATION_PACKET.md) | Official field map, truthful zero-adoption snapshot, 500-character drafts, private-field boundaries, and submission gates prepared; no application submitted |
 | 2026-09-03 | Current-main isolated installation recheck | [Verification record](./FRESH_INSTALL_TEST.md) | Public installer output matched a fresh checkout at `3bb2896`; Skill validation, repository checks, metadata, Codex discovery, and symlink boundary passed |
 | 2026-09-03 | Versioned visual-plan contract | [JSON Schema](../schemas/visual-plan.schema.json) | Both public visual plans are validated in CI, including unique shot IDs and complete dialogue-line coverage |
+| 2026-09-04 | Official-criteria and evidence refresh | [Application worksheet](./CODEX_OSS_APPLICATION_PACKET.md) | Official overview and terms rechecked; latest CI, release, Issue, and zero-adoption evidence reconciled without treating the v0.2.0 tester gate as an official application minimum |
 
 ## Application gate
 
-The application is ready for final review when:
+The public evidence pack is ready for maintainer final review when:
 
-- Both v0.1.1 and v0.2.0 represent meaningful completed work.
 - The physics and non-physics examples are reproducible.
 - Automated checks are passing.
-- Real-user feedback has been recorded truthfully.
 - Usage metrics and all three short answers have been refreshed immediately before submission.
-- The maintainer has personally checked the private identity fields and authorized submission.
+
+Real-user feedback and a completed v0.2.0 would strengthen selection evidence, but the official program page and terms do not state either as a mandatory application minimum. The repository must continue to disclose zero adoption until real evidence exists, and the v0.2.0 release keeps its independent tester gate.
+
+Final submission still requires the maintainer to check the private identity fields, review the Program Terms, choose the requested benefits, and explicitly authorize submission.
