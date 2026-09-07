@@ -1,0 +1,41 @@
+name: Publish verified v0.1.1
+
+on:
+  push:
+    branches: [codex/publish-verified-v0.1.1]
+    paths: [.github/workflows/publish-verified-v0.1.1.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-verified-v0.1.1
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'rui8001/produce-teaching-video'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify existing immutable tag and publish once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: rui8001/produce-teaching-video
+          RELEASE_NOTES: |
+            This Release publishes the existing v0.1.1 tag prepared on August 29; it does not move or recreate the tag.
+
+            Included: automated repository validation, fresh-install and discovery verification, source-checked solar-eclipse walkthrough, real-user testing guidance, and public maintenance/application evidence. Personal installation examples use ~/.agents/skills; the Skill invocation is unchanged.
+
+            The exact tagged source was revalidated on September 7. The walkthrough is pre-render production material, not a completed video or external user trial. Later main-branch Git examples and schema changes are not part of this tag. The separate v0.2.0 real-user release gate remains unmet.
+        run: |
+          set -euo pipefail
+          tag_object=$(gh api repos/rui8001/produce-teaching-video/git/ref/tags/v0.1.1 --jq .object.sha)
+          test "$tag_object" = 701b824fc22832c26aad925fc4ecc979621d54fe
+          tagged_commit=$(gh api repos/rui8001/produce-teaching-video/git/tags/701b824fc22832c26aad925fc4ecc979621d54fe --jq .object.sha)
+          test "$tagged_commit" = 9616c4bc2f4fcb5036acfc78424e3a5a2c66b325
+          if gh release view v0.1.1 --json url --jq .url; then
+            exit 0
+          fi
+          gh release create v0.1.1 --verify-tag --title 'v0.1.1 — validated installation and public walkthrough' --notes "$RELEASE_NOTES" --latest
+          gh release view v0.1.1 --json url,isDraft,isPrerelease,publishedAt
