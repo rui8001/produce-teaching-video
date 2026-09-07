@@ -2,13 +2,13 @@
 
 This maintainer worksheet maps the public repository evidence to the current application fields without storing private identity values. It is a draft, not a submitted application or a claim of eligibility.
 
-**Official program sources checked on 2026-09-04:**
+**Official program sources checked on 2026-09-07:**
 
 - [Codex for Open Source overview](https://developers.openai.com/community/codex-for-oss)
 - [Codex for Open Source Program Terms](https://learn.chatgpt.com/docs/codex-for-oss-terms)
 - [OpenAI Organization settings](https://platform.openai.com/settings/organization/general)
 
-The application field map below was last checked against the [application form](https://openai.com/form/codex-for-oss/) on 2026-09-02. Reopen the form and terms immediately before submission because they may change. The Program Terms require accurate and complete maintainer, repository, and role information; submission does not guarantee selection.
+The application field map below was last checked against the [application form](https://openai.com/form/codex-for-oss/) on 2026-09-07. Reopen the form and terms immediately before submission because they may change. The Program Terms require accurate and complete maintainer, repository, and role information; submission does not guarantee selection.
 
 ## Current decision
 
@@ -34,14 +34,14 @@ The application field map below was last checked against the [application form](
 
 ## Evidence snapshot
 
-Snapshot date: **2026-09-04**. Refresh every count immediately before applying.
+Snapshot date: **2026-09-07**. Refresh every count immediately before applying. See the [reproduced maintenance checks](./MAINTENANCE_RECHECK_2026-09-07.md).
 
 | Signal | Current public evidence |
 | --- | --- |
 | Public open source | Public MIT-licensed repository |
 | Releases | One public GitHub Release: [`v0.1.0`](https://github.com/rui8001/produce-teaching-video/releases/tag/v0.1.0); the verified `v0.1.1` tag does not yet have a Release page |
 | Reproducibility | [Current-main isolated-install verification](./FRESH_INSTALL_TEST.md), a [physics walkthrough](../examples/solar-eclipse/README.md), and a [Git walkthrough](../examples/git-merge-conflict/README.md) |
-| Automated maintenance | Latest checked run for commit `e1ac1b8`: [Repository quality](https://github.com/rui8001/produce-teaching-video/actions/runs/33742559884), passed |
+| Automated maintenance | Latest checked run for commit `a3ed605`: [Repository quality](https://github.com/rui8001/produce-teaching-video/actions/runs/33800249510), passed |
 | Public issue work | Four outcome Issues closed; [real-user trial Issue #2](https://github.com/rui8001/produce-teaching-video/issues/2) remains open |
 | Adoption snapshot | 0 stars, 0 forks, 0 recorded real-user invitations, and 0 responses; no adoption claim is made |
 | Active history | Dated [evidence log](./CODEX_OSS_APPLICATION.md#evidence-log), roadmap, changelog, tested commits, and release gates |
