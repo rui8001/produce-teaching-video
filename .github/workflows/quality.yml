@@ -36,3 +36,6 @@ jobs:
 
       - name: Run deterministic Git teaching demonstration
         run: bash examples/git-merge-conflict/demo.sh
+
+      - name: Test Git demonstration isolation
+        run: python -m unittest discover -s tests -v
