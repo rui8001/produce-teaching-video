@@ -19,6 +19,7 @@ The repository uses one deterministic validator locally and in GitHub Actions:
 ```bash
 python3 -m pip install -r requirements-dev.txt
 python3 scripts/validate_repository.py
+python3 -m unittest discover -s tests -v
 ```
 
 It validates the Skill frontmatter, UI metadata, JSON examples, local Markdown links, SVG syntax, and common credential or personal-path patterns. A passing scan reduces accidental exposure risk but does not replace a human privacy and licensing review.

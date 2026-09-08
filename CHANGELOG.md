@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Isolated the synthetic Git conflict demonstration from inherited repository/index selectors, user/system configuration, signing requirements and template hooks. Added regression tests that preserve a synthetic caller repository byte-for-byte and run in CI. The teaching workflow and Skill invocation are unchanged.
+
 ### Added
 
 - Reproducible non-physics example for resolving a simple Git merge conflict, including official sources, a deterministic temporary-repository demonstration, durable teaching artifacts, and a self-authored SVG.
