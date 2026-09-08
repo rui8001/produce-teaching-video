@@ -13,6 +13,7 @@ for git_env_name in ${!GIT_@}; do
 done
 export GIT_CONFIG_NOSYSTEM=1
 export GIT_CONFIG_GLOBAL=/dev/null
+export GIT_ATTR_NOSYSTEM=1
 export GIT_TERMINAL_PROMPT=0
 
 git_version=$(git --version)
