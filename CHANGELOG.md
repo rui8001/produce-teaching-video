@@ -4,6 +4,7 @@
 
 ### Fixed
 
+- Reject duplicate or malformed dialogue IDs and missing dialogue-line arrays during visual-plan cross-checks instead of silently discarding them. Both existing v1 examples and shared line references across shots remain valid; no artifact migration is required for those examples.
 - Isolated the synthetic Git conflict demonstration from inherited repository/index selectors, user/system configuration, signing requirements and template hooks. Added regression tests that preserve a synthetic caller repository byte-for-byte and run in CI. The teaching workflow and Skill invocation are unchanged.
 
 ### Added

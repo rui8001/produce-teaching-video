@@ -194,7 +194,11 @@ def validate_visual_plan_links(errors: list[str]) -> None:
 
         shots = plan.get("shots") if isinstance(plan, dict) else None
         lines = dialogue.get("lines") if isinstance(dialogue, dict) else None
-        if not isinstance(shots, list) or not isinstance(lines, list):
+        if not isinstance(shots, list):
+            errors.append(f"{path.relative_to(ROOT)} must contain a shots array")
+            continue
+        if not isinstance(lines, list) or not lines:
+            errors.append(f"{dialogue_path.relative_to(ROOT)} must contain a non-empty lines array")
             continue
 
         shot_ids = [
@@ -205,11 +209,21 @@ def validate_visual_plan_links(errors: list[str]) -> None:
         if len(shot_ids) != len(set(shot_ids)):
             errors.append(f"{path.relative_to(ROOT)} contains duplicate shot IDs")
 
-        dialogue_ids = {
-            line["id"]
-            for line in lines
-            if isinstance(line, dict) and isinstance(line.get("id"), str)
-        }
+        valid_dialogue_ids: list[str] = []
+        for index, line in enumerate(lines):
+            line_id = line.get("id") if isinstance(line, dict) else None
+            if not isinstance(line_id, str) or not line_id.strip():
+                errors.append(
+                    f"{dialogue_path.relative_to(ROOT)} lines[{index}] must be an object "
+                    "with a non-empty string ID"
+                )
+                continue
+            valid_dialogue_ids.append(line_id)
+
+        dialogue_ids = set(valid_dialogue_ids)
+        if len(valid_dialogue_ids) != len(dialogue_ids):
+            errors.append(f"{dialogue_path.relative_to(ROOT)} contains duplicate dialogue IDs")
+
         referenced_ids = {
             line_id
             for shot in shots
