@@ -1,6 +1,6 @@
 ---
 name: produce-teaching-video
-description: Create, resume, revise, or quality-check an instructional video for any subject by centering one learning objective, verified sources, visible mental models, real-audio timing, and learner transfer. Use for lessons, tutorials, course clips, concept animations, or skill demonstrations; do not use for ordinary promotional explainers whose success does not require the viewer to learn and apply something.
+description: Create, resume, revise, or review an instructional video with one learning objective and an observable learner outcome. Use for lessons, tutorials, concept animations, or skill demonstrations; ordinary promotional video belongs to its own workflow.
 ---
 
 # Produce Teaching Video
@@ -33,6 +33,8 @@ Do not skip `brief-locked`, `script-locked`, `audio-locked`, `alignment-locked`,
 
 Before paid services, image generation, dependency installation, external upload, final rendering, or publication, verify that the current task already authorizes that exact action. Permission to make a local draft never implies publication.
 
-Make a representative sample before the full render. It must contain the core teaching interaction, every active visual role, and a real transition. Approve it only after subject accuracy, source traceability, timing, captions, accessibility, and the learner transfer task pass.
+For initial production or a changed teaching/visual direction, make a representative sample containing the core teaching interaction, every active visual role, and a real transition. Record technical checks for subject accuracy, source traceability, timing, captions, accessibility, and transfer-task design. Record the approver, sample version, and authorization scope separately: agent QC never substitutes for required user approval. A transfer-task design check is not evidence that a real learner succeeded; record learner feedback only when actually observed.
+
+For a localized revision, read the status and affected workflow sections, retain still-valid approvals, preview the changed interval and adjacent transitions, and rerun impacted final checks. Reopen only checkpoints invalidated by the change; preserve any explicit requirement for user reapproval.
 
 After each meaningful stage, update the status with locked artifacts, sources, checks, unresolved issues, authorization scope, next action, and rollback path. Treat project files—not chat history—as durable production memory.
